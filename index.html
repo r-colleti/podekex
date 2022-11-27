@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pokedex - Kanto Dex 1.0</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<section class="pokedexSec">
+		<div class="pkArea">
+			<img onclick="changePoke()" class="pokeElement close" src="./images/pkclose.png">
+			<span class="openedInputs">
+				<img class="pokemonPreview" src="./images/pokeball.png">
+				<span class="nomePokemon">Select your Pokemon</span>
+				<form class="formInputSearch">
+					<input class="inputSearchPokemon" type="search" name="" placeholder="Name or Number" required>
+				</form>
+				<div class="btnSec">
+					<button onclick="prevPokemon()">< Prev</button>
+					<button onclick="nextPokemon()">Next ></button>
+				</div>
+			</span>
+		</div>
+	</section>
+
+	<aside class="copySec">
+		<figure><img class="ashImg" src="./images/ashpng.png"></figure>
+		<div class="copyDiv">
+			<h1>Pokedex</h1>
+			<h2>Por: Ricardo Colleti</h2>
+		</div>
+	</aside>
+
+	<script type="text/javascript" src="./script.js"></script>
+
+</body>
+</html>
