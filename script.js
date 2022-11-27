@@ -8,19 +8,59 @@ function changePoke() {
 	const body = document.querySelector('body');
 	const openedInputs = document.querySelector('.openedInputs');
 
-	if (poke.src == 'http://localhost/pokedex/images/pkclose.png') {
+	if (window.matchMedia("(max-width: 675px)").matches) {
 
-		poke.src = './images/pkopen.png';
-		assideHide.style.display = 'none';
-		body.style.gridTemplateColumns = '1fr 0px';
-		openedInputs.style.display = 'flex';
+		if (poke.src == 'https://r-colleti.github.io/podekex/images/pkclose.png') {
 
-	} else {
+			poke.src = './images/pokemobile.png';
+			body.style.gridTemplateColumns = '1fr';
+			openedInputs.style.display = 'flex';
 
-		assideHide.style.display = 'flex';
-		body.style.gridTemplateColumns = '1fr 400px';
-		openedInputs.style.display = 'none';
-		poke.src = './images/pkclose.png';
+		} else {
+
+			body.style.gridTemplateColumns = '1fr';
+			openedInputs.style.display = 'none';
+			poke.src = './images/pkclose.png';
+
+		}
+
+	}
+
+	else if (window.matchMedia("(max-width: 800px)").matches) {
+
+		if (poke.src == 'https://r-colleti.github.io/podekex/images/pkclose.png') {
+
+			poke.src = './images/pkopen.png';
+			body.style.gridTemplateColumns = '1fr';
+			openedInputs.style.display = 'flex';
+
+		} else {
+
+			body.style.gridTemplateColumns = '1fr';
+			openedInputs.style.display = 'none';
+			poke.src = './images/pkclose.png';
+
+		}
+
+	} 
+
+	else {
+
+		if (poke.src == 'https://r-colleti.github.io/podekex/images/pkclose.png') {
+
+			poke.src = './images/pkopen.png';
+			assideHide.style.display = 'none';
+			body.style.gridTemplateColumns = '1fr 0px';
+			openedInputs.style.display = 'flex';
+
+		} else {
+
+			assideHide.style.display = 'flex';
+			body.style.gridTemplateColumns = '1fr 400px';
+			openedInputs.style.display = 'none';
+			poke.src = './images/pkclose.png';
+
+		}
 
 	}
 }

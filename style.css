@@ -13,7 +13,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	transition: 0.2s;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .pokedexSec {
@@ -138,7 +138,11 @@ body {
 	height: auto;
 }
 
-.copySec h1 {
+.copyDiv {
+	margin: 0 20px;
+}
+
+.copyDiv h1 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	color: white;
@@ -146,10 +150,62 @@ body {
 	margin: 0;
 }
 
-.copySec h2 {
+.copyDiv h2 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 200;
 	color: white;
 	font-size: 24px;
 	margin: 0;
+}
+
+@media(max-width: 800px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 120px;
+		grid-template-areas: 
+		"poke"
+		"copy"
+		;
+	}
+
+	.pokedexSec {
+		box-sizing: border-box;
+		margin: 40px 0 60px 0;
+	}
+
+	.copySec {
+		flex-direction: row;
+	}
+
+	.copySec figure {
+		align-self: flex-end;
+		margin-bottom: 20px;
+	}
+
+	.ashImg {
+		max-width: 90px;
+	}
+
+	.copyDiv {
+		align-self: flex-end;
+		box-sizing: border-box;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	.copyDiv h1 {
+		font-size: 35px;
+	}
+
+	.copyDiv h2 {
+		font-size: 18px;
+
+	}
+}
+
+@media(max-width: 675px) {
+	body {
+		margin: 0;
+	}
 }
